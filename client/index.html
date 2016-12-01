@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <title>Todo-list</title>
+    <link href="/client/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/client/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+	<!--riga principale-->
+<div class="row">
+	<div class="col-lg-8">
+	<!--riga add todo-->
+		<div class="row">
+			<div class="col-lg-12" id="addtodo">
+
+				<form>
+				<h2>Aggiungi todo</h2>
+				  <div class="form-group">
+				    <label for="name">name todo</label>
+				    <input type="text" class="form-control" name="name" placeholder="todo-name">
+				  </div>
+				  <div class="form-group">
+				    <label for="description">Descrizione:</label>
+				    <input type="text" class="form-control" name="description" placeholder="Descrizione">
+				  </div>
+				  <div class="radio">
+					  <label>
+					    <input type="radio" name="important" value="true" checked>
+					    Importante
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="important" value="false">
+					    Non importante
+					  </label>
+				  </div>
+				  <button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+		</div>		
+		<div class="row">
+			<div class="col-lg-12">
+				<table class="table table-striped">
+					<tr>
+						<th>Name</th>
+						<th>Descrizione</th>
+						<th>Importante</th>
+						<th>Operazioni</th>
+					</tr>
+					<tr>
+						<td>todo1</td>
+						<td>Destrizione</td>
+						<td>true/false</td>
+						<td><button type="button" class="btn btn-primary btn-xs">Fatto</button> <button type="button" class="btn btn-danger btn-xs">Elimina</button></td>
+					</tr>
+					<tr>
+						<td>todo2</td>
+						<td>Destrizione</td>
+						<td>true/false</td>
+						<td><button type="button" class="btn btn-primary btn-xs">Fatto</button> <button type="button" class="btn btn-danger btn-xs">Elimina</button></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>	
+	<!--colonna todo fatti-->
+	<div class="col-lg-4" id="todofatti">
+	<h2>Lista todo gi&agrave; fatti</h2>
+		<ul type="square">
+			<li>todo1</li>
+			<li>todo2</li>
+		</ul>
+	</div>
+</div>
+</div>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+ <script src="/client/js/bootstrap.min.js"></script>
+</body>
+</html>
