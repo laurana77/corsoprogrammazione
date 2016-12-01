@@ -72,29 +72,32 @@
         <form>
   <div class="form-group">
     <label for="name">Nome todo:</label>
-    <input type="text" class="form-control" name="name" placeholder="todo-name">
+    <input type="text" class="form-control" name="name" placeholder="todo-name" ng-model="newTodo.name">
   </div>
   <div class="form-group">
     <label for="description">Descrizione:</label>
-    <input type="text" class="form-control" name="description" placeholder="Descrizione">
+    <input type="text" class="form-control" name="description" placeholder="Descrizione" ng-model="newTodo.desc">
   </div>
   <div class="radio">
   <label>
-    <input type="radio" name="important"  value="true" checked>
+    <input type="radio" name="important"  value="true" checked ng-model="newTodo.important">
     Importante
   </label>
 </div>
 <div class="radio">
   <label>
-    <input type="radio" name="important" value="false">
+    <input type="radio" name="important" value="false" ng-model="newTodo.important">
     Non importante
   </label>
 </div>
 
-
-
-
-  <button type="submit" class="btn btn-primary btn-block" style="margin-bottom: 10px;">Aggiungi</button>
+<hr>
+{{newTodo.name}}
+<hr>
+{{newTodo.desc}}
+<hr>
+{{newTodo.important}}
+  <button ng-click="aggiungitodo()" type="submit" class="btn btn-primary btn-block" style="margin-bottom: 10px;">Aggiungi</button>
 </form>
   </div>
 
@@ -114,8 +117,8 @@
             <td>TODO1</td>
             <td>Descrizion1</td>
             <td>True/False</td>
-            <td><button type="button" class="btn btn-primary btn-xs">fatto</button>
-            <button type="button" class="btn btn-danger btn-xs">cancella</button>
+            <td><button type="button" class="btn btn-primary btn-xs" ng-click="eseguitodo(1)">fatto</button>
+            <button type="button" class="btn btn-danger btn-xs" ng-click="cancellatodo(1)">cancella</button>
             </td>
           </tr>
 
