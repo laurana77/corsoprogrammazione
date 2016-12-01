@@ -16,7 +16,7 @@ var app = angular.module('app1', ['lbServices']);
 			}
 			$scope.eseguitodo=function(idtodo){
 				console.log("esegui "+$scope.newTodo + " " + idtodo);
-				for(i=0;$scope.todos.lenght;i++){
+				for(i=0;$scope.todos.length;i++){
 					if($scope.todos[i].id==idtodo){
 						$scope.todos[i].done=true;
 						Todo.upsert($scope.todos[i]).$promise.then(function(results){
