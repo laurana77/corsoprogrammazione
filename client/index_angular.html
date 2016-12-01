@@ -113,36 +113,22 @@
             <th>Importante</th>
             <th>Operazioni</th>
           </tr>
-          <tr>
-            <td>TODO1</td>
-            <td>Descrizion1</td>
-            <td>True/False</td>
-            <td><button type="button" class="btn btn-primary btn-xs" ng-click="eseguitodo(1)">fatto</button>
-            <button type="button" class="btn btn-danger btn-xs" ng-click="cancellatodo(1)">cancella</button>
+          <tr ng-repeat="item in todos">
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.important}}</td>
+            <td><button type="button" class="btn btn-primary btn-xs" ng-click="eseguitodo(item.id)">fatto</button>
+            <button type="button" class="btn btn-danger btn-xs" ng-click="cancellatodo(item.id)">cancella</button>
             </td>
           </tr>
-
           <tr>
-            <td>TODO1</td>
-            <td>Descrizion1</td>
-            <td>True/False</td>
-            <td><button type="button" class="btn btn-primary btn-xs">fatto</button>
-            <button type="button" class="btn btn-danger btn-xs">cancella</button>
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.important}}</td>
+            <td><button type="button" class="btn btn-primary btn-xs" ng-click="eseguitodo(item.id)">fatto</button>
+            <button type="button" class="btn btn-danger btn-xs" ng-click="cancellatodo(item.id)">cancella</button>
             </td>
           </tr>
-
-          <tr>
-            <td>TODO1</td>
-            <td>Descrizion1</td>
-            <td>True/False</td>
-            <td><button type="button" class="btn btn-primary btn-xs">fatto</button>
-            <button type="button" class="btn btn-danger btn-xs">cancella</button>
-            </td>
-          </tr>
-
-
-
-
         </table>
   </div>
   </div>
@@ -151,8 +137,8 @@
   <div class="col-lg-4" id="todofatti">
   <h2>Lista todo già fatti</h2>
       <ul>
-        <li>Todo1</li>
-        <li>Todo2</li>
+        <li ng-repeat="item in todosdone">{{item.name}}</li>
+        <li ng-repeat="item in todosdone">{{item.name}}</li>
       </ul>
   </div>
 </div>
